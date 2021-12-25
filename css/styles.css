@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-size: 16px;
   color: #fff;
@@ -21,4 +25,66 @@ body {
 #navbar-links {
   font-size: 1em;
   font-family: "Orbitron", sans-serif;
+}
+
+.nav-link:hover {
+  background: brown;
+}
+
+#tiles {
+  margin-top: 60px;
+}
+
+#tile-1,
+#tile-2,
+#tile-3 {
+  height: 250px;
+  width: 100%;
+  position: relative;
+  border: 2px solid white;
+  overflow: hidden;
+}
+
+#tile-1:hover,
+#tile-2:hover,
+#tile-3:hover {
+  background-color: #2ee9f0;
+  transition: 0.4s;
+  opacity: 0.8;
+}
+
+#tile-1 span,
+#tile-2 span,
+#tile-3 span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: rgb(231, 10, 10);
+  color: #fff;
+  opacity: 0.8;
+}
+
+@media (max-width: 404px) {
+  .navbar-brand,
+  #navbar-title {
+    margin: 0px;
+  }
+
+  #navbar-title,
+  #navbar-links {
+    font-size: 4vw;
+  }
+
+  .navbar-toggler {
+    padding: 1.5vw 1.5vw;
+  }
+
+  .navbar-toggler-icon {
+    vertical-align: middle;
+    font-size: 4vw;
+  }
 }
