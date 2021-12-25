@@ -31,6 +31,10 @@ body {
   background: brown;
 }
 
+.row > div {
+  margin-bottom: 24px;
+}
+
 #tiles {
   margin-top: 60px;
 }
@@ -41,16 +45,16 @@ body {
   height: 250px;
   width: 100%;
   position: relative;
-  border: 2px solid white;
+  border: 2px solid rgb(131, 128, 128);
+  border-radius: 20px;
   overflow: hidden;
 }
 
 #tile-1:hover,
 #tile-2:hover,
 #tile-3:hover {
-  background-color: #2ee9f0;
+  border: 2px solid rgb(226, 215, 215);
   transition: 0.4s;
-  opacity: 0.8;
 }
 
 #tile-1 span,
