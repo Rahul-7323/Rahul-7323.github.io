@@ -1,9 +1,8 @@
-import './style.css'
-import * as THREE from 'three';
+import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-
+console.log("main.js loaded");
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -54,20 +53,20 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('./space.jpg');
 
 scene.background = spaceTexture;
 
 
-const rahulTexture = new THREE.TextureLoader().load('rahul.gif');
+const rahulTexture = new THREE.TextureLoader().load('./rahul.gif');
 const rahul = new THREE.Mesh(
   new THREE.BoxGeometry(3, 3, 3),
   new THREE.MeshBasicMaterial({ map: rahulTexture })
 );
 scene.add(rahul);
 
-const earthTexture = new THREE.TextureLoader().load('earth_daymap.jpg');
-const earthNormalTexture = new THREE.TextureLoader().load('earth_normalmap.png');
+const earthTexture = new THREE.TextureLoader().load('./earth_daymap.jpg');
+const earthNormalTexture = new THREE.TextureLoader().load('./earth_normalmap.png');
 const earth = new THREE.Mesh(
   new THREE.SphereGeometry(3, 24, 24),
   new THREE.MeshBasicMaterial({
