@@ -1,6 +1,8 @@
-import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
+import './style.css'
 
-// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import * as THREE from 'three';
+
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 console.log("main.js loaded");
 const scene = new THREE.Scene();
